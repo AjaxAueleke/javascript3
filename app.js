@@ -333,14 +333,14 @@
 // {
 //     console.log(marks);
 // }
-// q5 
+// q5
 //implementation of indexOf
 
 // function indexOf(string, a)
 // {
 //     if (string === undefined)
 //         return -1;
-    
+
 //     i = 0;
 //     while(i < string.length)
 //     {
@@ -354,21 +354,64 @@
 // }
 // console.log(indexOf("how are you boy", "boy"));
 
-function del(string)
-{
-    if(string === undefined)
-        return null;
-    string = string.split("");
-        for (let i = 0; i < string.length; i++)
-    {
-        if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u')
-        {
-             string.splice(i,1);
-        
-        i--;    }
+// function del(string)
+// {
+//     if(string === undefined)
+//         return null;
+//     string = string.split("");
+//         for (let i = 0; i < string.length; i++)
+//     {
+//         if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u')
+//         {
+//              string.splice(i,1);
 
-        console.log(string);
+//         i--;    }
+
+//         console.log(string);
+//     }
+//     return string.join("");
+// }
+// console.log(del("AA if iii The weekend is the most sought after artist of all time"));
+
+//q7
+function vowelCounter(string) {
+  var vowels = [
+    "ae",
+    "ai",
+    "ao",
+    "au",
+    "ea",
+    "ee",
+    "ei",
+    "eo",
+    "eu",
+    "ia",
+    "ie",
+    "ii",
+    "io",
+    "iu",
+    "oa",
+    "oe",
+    "oi",
+    "oo",
+    "ou",
+    "aa",
+    "ua",
+    "ue",
+    "ui",
+    "uo",
+    "uu",
+  ];
+  var count = 0;
+  for (let i = 0; i < string.length; i++) {
+    for (let j = 0; j < vowels.length; j++) {
+      if (string.slice(i, i + 2) === vowels[j]) {
+        count++;
+      }
     }
-    return string.join("");
+  }
+  console.log(count);
+  return count;
 }
-console.log(del("AA if iii The weekend is the most sought after artist of all time"));
+console.log(vowelCounter("Abee yaar kese ho"));
+console.log(vowelCounter("heemaen"));
