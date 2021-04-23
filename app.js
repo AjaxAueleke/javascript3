@@ -333,4 +333,42 @@
 // {
 //     console.log(marks);
 // }
+// q5 
+//implementation of indexOf
 
+// function indexOf(string, a)
+// {
+//     if (string === undefined)
+//         return -1;
+    
+//     i = 0;
+//     while(i < string.length)
+//     {
+//         if (string.slice(i, i+(a.length)) === a)
+//         {
+//             return i
+//         }
+//         i++;
+//     }
+//     return i;
+// }
+// console.log(indexOf("how are you boy", "boy"));
+
+function del(string)
+{
+    if(string === undefined)
+        return null;
+    string = string.split("");
+        for (let i = 0; i < string.length; i++)
+    {
+        if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u')
+        {
+             string.splice(i,1);
+        
+        i--;    }
+
+        console.log(string);
+    }
+    return string.join("");
+}
+console.log(del("AA if iii The weekend is the most sought after artist of all time"));
